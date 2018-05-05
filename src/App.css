@@ -38,6 +38,7 @@ button:hover {
 #header {
   background-color: #f7f7f7;
 }
+
 #header li.nav-item {
   margin-right: 15px !important;
 }
@@ -56,6 +57,10 @@ button:hover {
   color: #fff;
 }
 
+#header__category-links {
+  padding-left: 0;
+}
+
 #header #header__category-links .nav-item:hover {
   background-color: #ee3d56;
   color: #fff;
@@ -63,6 +68,14 @@ button:hover {
 
 #header__category-links li.nav-item:after {
   content: none;
+}
+
+.collapse.navbar-collapse {
+  margin-left: 0;
+}
+
+#navbar {
+  border-bottom: 1px solid #ffc7cf;
 }
 
 #navbar__search {
@@ -142,7 +155,6 @@ li.nav-item:hover:after {
   /* opacity: 1; */
 }
 
-
 #navbar__navitem--hover {
   position: absolute;
   z-index: 100;
@@ -170,11 +182,13 @@ li.nav-item:hover:after {
   list-style-type: none;
 }
 
-#navbar__navitem--category li{
-  padding-left: 15px;
+#navbar__navitem--category li a {
+  color: #6c757d;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#navbar__navitem--category li:hover {
+#navbar__navitem--category li a:hover {
   background-color: #ee3d56;
   color: #fff;
 }
@@ -265,6 +279,7 @@ input {
   padding: 30px 30px;
   overflow: auto;
 }
+
 .musthave-container {
   margin: 0 auto;
 }
@@ -272,6 +287,7 @@ input {
 .musthave-container ul{
   display: inline-block;
 }
+
 #musthave--text,
 #popular--text {
   padding-bottom: 30px;
@@ -535,7 +551,67 @@ figcaption {
   padding-top: 10px;
 }
 
+#plp {
+  padding-top: 20px;
+}
+
 .plp__product {
+  margin-bottom: 10px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.plp__product--section:hover {
+  outline: 1px solid #ffc7cf;
+}
+
+.plp__product--name,
+.plp__product--price {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.product-actions {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    left: 15px;
+    bottom: 60px;
+    border-bottom: 1px solid #eaeaec;
+    border-top: 1px solid #eaeaec;
+    background: #fff;
+    width: 86%;
+}
+
+.product-wishlist {
+    width: 50%;
+}
+
+.product-addToBag {
+    width: 50%;
+}
+
+.product-actionsButton {
+    line-height: 16px;
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 11px;
+    color: #ee3d56;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.product-addToBag span {
+    border-left: 1px dotted #d4d5d9;
+    display: block;
+}
+
+.plp__product--section:hover .product-actions {
+  display: block
+}
+
+.plp__subcategory--heading {
+    padding-bottom: 20px;
+    font-weight: bold
 }

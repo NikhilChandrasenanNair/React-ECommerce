@@ -35,30 +35,10 @@ class Men extends React.Component {
     return (
       <Container id="men">
         <Row>
-          <Col xs="3">
-            <ListGroup>
-              {
-                subCategories.map((aSubCatObj) => {
-                  let returnObj = []
-                  for (const key of Object.keys(aSubCatObj)) {
-                      returnObj.push(
-                        <div className="filters" key={key}>
-                          <ListGroupItem disabled>{key}</ListGroupItem>
-                          <SubCategory subcategories={aSubCatObj[key]}/>
-                        </div>
-                      )
-                  }
-                  return returnObj
-                })
-              }
-            </ListGroup>
-          </Col>
           <Col xs="9">
-            <Row>
-              <div>
-                <img className="" width="100%" src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_1.0/assets/images/retaillabs/2018/4/27/11524849701012-Flying-Machine-Desktop-Slideshow-May-2018.jpg" alt="Flying-Machine"/>
-              </div>
-            </Row>
+            <div className="men__collection">
+              <img className="men__collection--image" width="100%" src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_1.0/assets/images/retaillabs/2018/4/27/11524849701012-Flying-Machine-Desktop-Slideshow-May-2018.jpg" alt="Flying-Machine"/>
+            </div>
             <Row className="men__collection">
               <Col xs="12" className="men__collection--banner">
                 <div className="men__collection--container">
@@ -118,7 +98,7 @@ class Men extends React.Component {
                 </section>
               </Col>
             </Row>
-            <Row className="men__collection--new-arrivals">
+            <div className="men__collection--new-arrivals">
               <section>
                 <div>
                   <img className="" width="100%" src="https://n.nordstrommedia.com/id/3a707062-9577-4bf4-80d7-3ff482260de3.jpeg?w=1334&h=600" alt="New arrivals, warming trends."/>
@@ -147,12 +127,30 @@ class Men extends React.Component {
                   </div>
                 </div>
               </section>
-            </Row>
-            <Row className="men__collection--new-arrivals">
+            </div>
+            <div className="men__collection--new-arrivals">
               <div>
                 <img width="100%" src="https://n.nordstrommedia.com/id/09ab5ad2-1d86-458c-8be9-46475a9e5081.jpeg?w=1334&amp;h=250" alt="See what's new in big and tall." />
               </div>
-            </Row>
+            </div>
+          </Col>
+          <Col xs="3">
+            <ListGroup>
+              {
+                subCategories.map((aSubCatObj) => {
+                  let returnObj = []
+                  for (const key of Object.keys(aSubCatObj)) {
+                      returnObj.push(
+                        <div className="filters" key={key}>
+                          <ListGroupItem disabled>{key}</ListGroupItem>
+                          <SubCategory subcategories={aSubCatObj[key]}/>
+                        </div>
+                      )
+                  }
+                  return returnObj
+                })
+              }
+            </ListGroup>
           </Col>
         </Row>
       </Container>
