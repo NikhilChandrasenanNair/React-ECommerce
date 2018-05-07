@@ -611,7 +611,36 @@ figcaption {
   display: block
 }
 
+.plp__subcategory--heading .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.plp__subcategory--heading .row .col-9 {
+  align-self: center;
+}
+
+.plp__subcategory--heading .form-group {
+  margin-bottom: 0;
+}
+
 .plp__subcategory--heading {
     padding-bottom: 20px;
     font-weight: bold
+}
+
+.plp__currentSubCategory {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.plp__currentSubCategoryName {
+  text-transform: capitalize;
+}
+
+.plp__currentSubCategoryLength {
+  color: #d4d5d9;
+  padding-left: 10px;
+  font-weight: normal;
 }

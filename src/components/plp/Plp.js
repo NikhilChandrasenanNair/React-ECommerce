@@ -51,13 +51,23 @@ function ProductList(props) {
   )
 }
 
+function SubCategoryLength(props) {
+  let currentSubCategory = props.currentSubCategory
+  let currentSubCategoryLength = props.productList[0][currentSubCategory.toLowerCase()].length
+
+  return (
+    <span className="plp__currentSubCategoryLength">
+      - {currentSubCategoryLength} items
+    </span>
+  )
+}
+
 class PLP extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       aSubCategory: '',
     }
-
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -333,7 +343,7 @@ class PLP extends React.Component {
     				color: ['Red'],
     				discount: '',
     				image: 'https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/2331791/2018/1/2/11514891316515-Timberland-Men-Red--White-Regular-Fit-Checked-Casual-Shirt-5521514891316387-1_mini.jpg',
-    				id: '1536597',
+    				id: '2331791',
     				currency: '$',
     				alt: 'Timberland Men Red & White Slim Fit Checked Casual Shirt'
     			}
@@ -348,9 +358,12 @@ class PLP extends React.Component {
               <Col xs="12" className="plp__subcategory--heading">
                 <Row>
                   <Col xs="9">
-                    <h5>
-                      {this.state.aSubCategory}
-                    </h5>
+                    <div className="plp__currentSubCategory">
+                      <span className="plp__currentSubCategoryName">
+                        {this.state.aSubCategory}
+                      </span>
+                      <SubCategoryLength productList={productList} currentSubCategory={this.state.aSubCategory} />
+                    </div>
                   </Col>
                   <Col xs="3">
                     <FormGroup>
