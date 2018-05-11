@@ -278,6 +278,7 @@ input {
   display: block;
   padding: 30px 30px;
   overflow: auto;
+  background: #f7f7f7;
 }
 
 .musthave-container {
@@ -303,9 +304,18 @@ input {
   padding-right: 40px;
 }
 
+#popular {
+  background: #f9f9f9;
+}
+
 .popular-multipleItemCarousel {
   max-width: 1840px;
   margin: auto;
+}
+
+.popular-multipleItemCarousel h3 {
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 figure {
@@ -316,7 +326,6 @@ figure {
 	display: block;
 	cursor: pointer;
 	overflow: hidden;
-	border: 3px solid #fff;
 }
 
 figure:hover figcaption {

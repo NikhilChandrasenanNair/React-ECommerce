@@ -202,8 +202,8 @@ class PLP extends React.Component {
   	        },
   	        {
   	          productName: 'esprit',
+              brand: 'esprit',
   	          price: '14',
-  	          brand: 'esprit',
   	          sizes: ['s', 'm', 'l', 'xl'],
   	          color: ['Blue'],
   	          discount: '',
