@@ -6,7 +6,13 @@
 }
 
 *:focus {
-    outline: none;
+  outline: none;
+}
+
+.form-control:focus {
+  border: 1px solid #ee3d56 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 a:hover {
@@ -14,14 +20,18 @@ a:hover {
 }
 
 .clr{
-    clear:both;
-    font-size:0;
+  clear:both;
+  font-size:0;
 }
 
 ::selection {
-    text-shadow: none;
-    color: #fff;
-    background: #ee3d56;
+  text-shadow: none;
+  color: #fff;
+  background: #ee3d56;
+}
+
+input[type="text"] {
+  -webkit-appearance: none;
 }
 
 button {
@@ -539,7 +549,6 @@ figcaption {
   color: #fff;
   left: 38%;
   top: 80%;
-  width: 50%
 }
 
 .story__detail {
